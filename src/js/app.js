@@ -10,6 +10,7 @@
     // Initialize variables
     var $window = $(window);
     var $usernameInput = $('.usernameInput'); // Input for username
+	var $participates = $('.participates'); // participates
     var $messages = $('.messages'); // Messages area
     var $inputMessage = $('.inputMessage'); // Input message input box
 
@@ -32,6 +33,7 @@
         } else {
             message += "there are " + data.numUsers + " participants";
         }
+		$participates.append($('<li>').addClass('user').text(data.username));
         log(message);
     }
 
